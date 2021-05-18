@@ -1,0 +1,9 @@
+package com.michaelDev.course.repositories;
+
+import com.michaelDev.course.entities.Order;
+import com.michaelDev.course.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order,Long> {
+
+}
