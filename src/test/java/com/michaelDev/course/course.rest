@@ -1,0 +1,53 @@
+##################################################################
+# USERS - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
+##################################################################
+
+####
+GET http://localhost:8080/users
+####
+
+####
+GET http://localhost:8080/users/1
+####
+
+
+
+
+##################################################################
+# CATEGORY - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
+##################################################################
+
+####
+GET http://localhost:8080/categories
+####
+
+
+####
+GET http://localhost:8080/categories/1
+####
+
+##################################################################
+# ORDER - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
+##################################################################
+
+####
+GET http://localhost:8080/orders
+####
+
+
+####
+GET http://localhost:8080/orders/1
+####
+
+##################################################################
+# PRODUCT - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
+##################################################################
+
+####
+GET http://localhost:8080/products
+####
+
+
+####
+GET http://localhost:8080/products/1
+####
