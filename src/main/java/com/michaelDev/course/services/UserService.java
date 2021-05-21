@@ -13,6 +13,10 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
+    public User insert(User obj){
+        return repository.save(obj);
+    }
+
     public List<User> findAll(){
         return repository.findAll();
     }
