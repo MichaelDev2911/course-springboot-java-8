@@ -24,8 +24,11 @@ public class Order implements Serializable {
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
+
     @OneToMany(mappedBy = "id.order")
     private Set<OrderItem> items = new HashSet<>();
+    @OneToOne(mappedBy = "order",cascade = CascadeType.ALL)
+    private Payment payment;
 
     public Order(){
 
@@ -70,6 +73,14 @@ public class Order implements Serializable {
         if(orderStatus != null) {
             this.orderStatus = orderStatus.getCode();
         }
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
     public Set<OrderItem> getItems() {
