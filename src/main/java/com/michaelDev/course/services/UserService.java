@@ -2,6 +2,7 @@ package com.michaelDev.course.services;
 
 import com.michaelDev.course.entities.User;
 import com.michaelDev.course.repositories.UserRepository;
+import com.michaelDev.course.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ public class UserService {
 
     public User findById(Long id){
         Optional<User> obj= repository.findById(id);
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User update(Long id, User obj){
