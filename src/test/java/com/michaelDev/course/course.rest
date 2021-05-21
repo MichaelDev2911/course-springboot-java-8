@@ -25,6 +25,17 @@ GET http://localhost:8080/users/1
 ####
 
 ####
+PUT http://localhost:8080/users/1
+Content-Type: application/json
+
+{
+  "name": "Ana Carolina",
+  "email": "ana@gmail.com",
+  "phone": "977557788"
+
+}
+
+####
 DELETE http://localhost:8080/users/3
 ####
 
