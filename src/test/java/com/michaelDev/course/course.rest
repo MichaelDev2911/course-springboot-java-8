@@ -1,5 +1,6 @@
 ##################################################################
 # USERS - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
+# path of prodution - https://course-java-springboot-michael.herokuapp.com
 ##################################################################
 
 ####
@@ -85,6 +86,19 @@ DELETE http://localhost:8080/categories/3
 ##################################################################
 
 ####
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+{
+  "moment": "2019-06-20T19:53:07Z",
+  "orderStatus": "PAID",
+  "client": 2
+
+}
+
+####
+
+####
 GET http://localhost:8080/orders
 ####
 
@@ -97,6 +111,17 @@ GET http://localhost:8080/orders/1
 # PRODUCT - TESTE DE CRUD (C=CREATE(POST), R=LEITURA(GET), U=UPDATE, D=DELETE
 ##################################################################
 
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "moment": "2019-06-20T19:53:07Z",
+  "orderStatus": "PAID",
+  "client": 2
+
+}
+
+####
 ####
 GET http://localhost:8080/products
 ####
