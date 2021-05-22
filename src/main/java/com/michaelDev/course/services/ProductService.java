@@ -3,6 +3,7 @@ package com.michaelDev.course.services;
 import com.michaelDev.course.entities.Category;
 import com.michaelDev.course.entities.Product;
 import com.michaelDev.course.repositories.ProductRepository;
+import com.michaelDev.course.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,6 @@ public class ProductService {
 
     public Product findById(Long id){
         Optional<Product> obj= repository.findById(id);
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 }

@@ -17,7 +17,7 @@ Content-Type: application/json
 ####
 
 ####
-GET http://localhost:8080/users
+GET https://course-java-springboot-michael.herokuapp.com/users
 ####
 
 ####
@@ -47,12 +47,37 @@ DELETE http://localhost:8080/users/3
 ##################################################################
 
 ####
+POST http://localhost:8080/categories
+Content-Type: application/json
+
+{
+  "name": "Games"
+
+}
+
+####
+
+####
 GET http://localhost:8080/categories
 ####
 
 
 ####
 GET http://localhost:8080/categories/1
+####
+
+####
+PUT http://localhost:8080/categories/1
+Content-Type: application/json
+
+{
+  "name": "Music"
+}
+
+####
+
+####
+DELETE http://localhost:8080/categories/3
 ####
 
 ##################################################################
